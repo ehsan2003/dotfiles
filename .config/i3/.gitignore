@@ -1,0 +1,3 @@
+# brightness related files are ignored to make sure that display is set correctly  
+dec-brightness
+inc-brightness

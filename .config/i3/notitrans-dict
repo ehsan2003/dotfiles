@@ -1,0 +1,6 @@
+#!/bin/bash
+text=$(xsel -o)
+complete=$(trans -d  -no-ansi "$text")
+brief=$(trans :fa -no-bidi -no-ansi -b "$text")
+
+notify-send "$text" "$(echo -n "$brief\n$complete")"

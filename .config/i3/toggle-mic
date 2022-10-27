@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+notify-send 'mic toggle' "$(amixer sset Capture toggle|grep 'Front')"

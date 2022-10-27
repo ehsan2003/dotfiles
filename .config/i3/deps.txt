@@ -1,0 +1,8 @@
+translate-shell
+xsel
+dunst
+rofi
+flameshot
+i3status
+picom
+nitrogen

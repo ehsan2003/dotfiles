@@ -1,0 +1,4 @@
+#!/bin/bash
+text=$(xsel -o)
+brief=$(trans :en -no-ansi "$text")
+notify-send "$text" "$brief"

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+disp="amdgpu_bl0"
+echo $disp
+current=`brightnessctl -d "$disp" get`
+next=`expr $current + 10`
+echo $next
+brightnessctl -d $disp set $next
