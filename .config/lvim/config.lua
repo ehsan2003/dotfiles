@@ -292,4 +292,3 @@ lvim.plugins = {
   },
 }
 lvim.builtin.treesitter.rainbow.enable = true
-lvim.builtin.cmp
