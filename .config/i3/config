@@ -198,16 +198,17 @@ workspace_layout tabbed
 bindsym Print exec "flameshot gui"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-bindsym $mod+t exec "command /home/ehsan/.config/i3/notitrans-fa"
-bindsym $mod+y exec "command /home/ehsan/.config/i3/notitrans-en"
-bindsym $mod+g exec "command /home/ehsan/.config/i3/google-search"
-bindsym $mod+x exec "command /home/ehsan/.config/i3/notitrans-dict"
+bindsym $mod+t exec "$BINARY_FILES/notitrans-fa"
+bindsym $mod+y exec "$BINARY_FILES/notitrans-en"
+bindsym $mod+g exec "$BINARY_FILES/google-search"
+bindsym $mod+x exec "$BINARY_FILES/notitrans-dict"
 
 bindsym $mod+c exec "dunstctl history-pop"
-bindsym Pause exec bash /home/ehsan/.config/i3/toggle-mic 
+bindsym Pause exec "$BINARY_FILES/i3/toggle-mic" 
 
-bindsym $mod+b exec bash /home/ehsan/.config/i3/inc-brightness
-bindsym $mod+n exec bash /home/ehsan/.config/i3/dec-brightness
+bindsym $mod+b exec "$BINARY_FILES/inc-brightness"
+bindsym $mod+n exec "$BINARY_FILES/dec-brightness"
+bindsym $mod+i exec "notify-send test $BINARY_FILES"
 
 exec --no-startup-id "nitrogen --restore &"
 exec --no-startup-id "picom"
