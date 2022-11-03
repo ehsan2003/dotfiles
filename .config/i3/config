@@ -211,5 +211,4 @@ bindsym $mod+n exec "$BINARY_FILES/dec-brightness"
 bindsym $mod+i exec "notify-send test $BINARY_FILES"
 
 exec --no-startup-id "nitrogen --restore &"
-exec --no-startup-id "picom"
 exec --no-startup-id "blueman-applet"
