@@ -192,7 +192,7 @@ default_border none
 exec --no-startup-id "setxkbmap -layout us,ir -option grp:win_space_toggle -option caps:swapescape"
 exec --no-startup-id "ss-qt5"
 
-exec --no-startup-id "xmodmap -e 'keycode 94 = Shift_L'"
+exec --no-startup-id "sleep 2 && xmodmap -e 'keycode 94 = Shift_L'"
 workspace_layout tabbed
 
 bindsym Print exec "flameshot gui"
