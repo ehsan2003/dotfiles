@@ -1,0 +1,14 @@
+#!/bin/bash
+
+curl https://github.com/trojan-gfw/trojan/releases/download/v1.16.0/trojan-1.16.0-linux-amd64.tar.xz | sudo tar -xf - -C /opt/
+
+echo "Creating systemd service symlink"
+sudo ln -s ~/.services/trojan.service /etc/systemd/system
+
+echo "reloading systemd"
+sudo systemctl daemon-reload
+echo "enabling trojan.service"
+sudo systemctl enable trojan.service
+
+echo "All done"
+echo "Please edit /opt/trojan/config.json to match your server credentials. then run : 'sudo systemctl start trojan.service' to run the proxy "
