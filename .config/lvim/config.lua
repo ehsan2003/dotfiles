@@ -388,3 +388,6 @@ dap.configurations.python = {
     end;
   }
 }
+
+
+require 'lspconfig'.denols.setup {}
