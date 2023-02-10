@@ -1,0 +1,25 @@
+#!/bin/bash
+cmd=$1
+delay="${2:-2}"
+
+f1=$RANDOM
+f2=$RANDOM
+
+trap 'rm /tmp/$f1 /tmp/$f2 2> /dev/null ' err exit
+
+eval "$cmd" > /tmp/$f2
+
+while true 
+do 
+  cp /tmp/$f2 /tmp/$f1;
+  eval "$cmd" > /tmp/$f2
+  r=`diff /tmp/$f1 /tmp/$f2`;
+  if [ "$r" != "" ]; then 
+    break;
+  fi
+  clear
+  cat /tmp/$f2;
+  sleep $delay
+done
+
+
